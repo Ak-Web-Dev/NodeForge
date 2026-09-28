@@ -2,12 +2,24 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>NodeForge</title>
+    <title>NodeForge — Visual Programming Environment</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><text y='24' font-size='24'>⚡</text></svg>" />
+    <link rel="stylesheet" href="/src/styles/main.css" />
   </head>
   <body>
-    <div id="app"></div>
+    <div id="app">
+      <header id="toolbar" class="toolbar"></header>
+      <div id="workspace">
+        <aside id="sidebar" class="sidebar"></aside>
+        <main id="canvas-container" class="canvas-container">
+          <svg id="connections-svg" class="connections-svg"></svg>
+          <div id="canvas" class="canvas"></div>
+        </main>
+        <aside id="inspector" class="inspector"></aside>
+      </div>
+      <footer id="console-panel" class="console-panel"></footer>
+    </div>
     <script type="module" src="/src/main.js"></script>
   </body>
 </html>

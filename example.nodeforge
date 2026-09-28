@@ -1,0 +1,94 @@
+{
+  "version": 1,
+  "projectName": "Untitled",
+  "nodes": [
+    {
+      "id": "n1_x0a8",
+      "type": "events.on_start",
+      "x": 904,
+      "y": 58,
+      "data": {}
+    },
+    {
+      "id": "n2_g2qh",
+      "type": "data.prompt_number",
+      "x": 207,
+      "y": 376,
+      "data": {
+        "message": "Enter a number:"
+      }
+    },
+    {
+      "id": "n3_6dsv",
+      "type": "events.on_start",
+      "x": 41,
+      "y": 283,
+      "data": {}
+    },
+    {
+      "id": "n4_4c8q",
+      "type": "data.number",
+      "x": 206,
+      "y": 134,
+      "data": {
+        "value": 2
+      }
+    },
+    {
+      "id": "n5_xzrh",
+      "type": "math.multiply",
+      "x": 596,
+      "y": 338,
+      "data": {}
+    },
+    {
+      "id": "n6_r2ld",
+      "type": "data.print",
+      "x": 1131,
+      "y": 276,
+      "data": {}
+    }
+  ],
+  "connections": [
+    {
+      "id": "c_mzq4ni",
+      "fromNode": "n3_6dsv",
+      "fromPort": "exec",
+      "toNode": "n2_g2qh",
+      "toPort": "exec",
+      "type": "exec"
+    },
+    {
+      "id": "c_zw4mus",
+      "fromNode": "n4_4c8q",
+      "fromPort": "value",
+      "toNode": "n5_xzrh",
+      "toPort": "a",
+      "type": "number"
+    },
+    {
+      "id": "c_nevwm3",
+      "fromNode": "n2_g2qh",
+      "fromPort": "value",
+      "toNode": "n5_xzrh",
+      "toPort": "b",
+      "type": "number"
+    },
+    {
+      "id": "c_s8g8xc",
+      "fromNode": "n5_xzrh",
+      "fromPort": "result",
+      "toNode": "n6_r2ld",
+      "toPort": "value",
+      "type": "number"
+    },
+    {
+      "id": "c_ujlo1c",
+      "fromNode": "n1_x0a8",
+      "fromPort": "exec",
+      "toNode": "n6_r2ld",
+      "toPort": "exec",
+      "type": "exec"
+    }
+  ]
+}
